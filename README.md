@@ -175,6 +175,8 @@ Add EEPROM/Flash logging to retain hydration history across power cycles
 Add a Red LED to indicate missed reminders or significant backlog against the daily target
 Add Bluetooth/Wi-Fi connectivity to synchronize hydration data with a mobile application
 Support multiple user profiles with individual daily hydration goals
+
+
 👤 Author
 
 Dhadi Ashwini
