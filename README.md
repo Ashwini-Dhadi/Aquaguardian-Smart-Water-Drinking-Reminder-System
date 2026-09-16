@@ -171,7 +171,7 @@ The system is designed around an LPC2148-based embedded controller with a 16×2 
 The project combines RTC-based scheduling, hydration tracking, keypad input, LCD interfacing, external interrupt handling, LED status indication, and buzzer alerts into a single compact embedded healthcare solution.
 
 
-📈 Future Enhancements
+## 📈 Future Enhancements
 
 Add EEPROM/Flash logging to retain hydration history across power cycles
 Add a Red LED to indicate missed reminders or significant backlog against the daily target
@@ -179,6 +179,6 @@ Add Bluetooth/Wi-Fi connectivity to synchronize hydration data with a mobile app
 Support multiple user profiles with individual daily hydration goals
 
 
-👤 Author
+## 👤 Author
 
 Dhadi Ashwini
