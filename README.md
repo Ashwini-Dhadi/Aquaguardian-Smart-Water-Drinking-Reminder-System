@@ -1,9 +1,8 @@
-
 # 💧 AquaGuardian – Smart Water Drinking Reminder System
 
 A real-time embedded hydration reminder system developed using the LPC2148 ARM7 microcontroller.
 
-*Stay Hydrated • Smart Reminders • Simple Control*
+**Stay Hydrated • Smart Reminders • Simple Control**
 
 ## 📌 Project Overview
 
@@ -28,31 +27,31 @@ The system also provides a Configuration Mode through an external interrupt. Pre
 
 ## 🧩 Block Diagram
 
-![AquaGuardian Block Diagram](aquaguardian_block_diagram.svg)
+![AquaGuardian Block Diagram](aquaguardian_block_diagram-1.svg)
 
 ## ⚙️ System Working
 
-The system works mainly in two modes: **Normal Mode** and **Configuration Mode**.
+The system works mainly in two modes: Normal Mode and Configuration Mode.
 
 ### 🟢 Normal Mode
 
-1. Initializes the required hardware peripherals — LCD, RTC, keypad, buzzer, and interrupt system.
-2. Reads and maintains the current time from the RTC.
-3. Continuously compares the current time with the next scheduled reminder.
-4. When the reminder time is reached, lights the Yellow LED, sounds the buzzer, and displays a message on the LCD.
-5. Repeats the alert until the user presses the Drink button to acknowledge it.
-6. On acknowledgment, increments the glass counter, updates the LCD with glasses consumed and remaining, and schedules the next reminder.
-7. Lights the Green LED once the daily hydration goal is achieved.
-8. At midnight, resets the glass counter and status indicators while retaining the configured daily goal.
+- Initializes the required hardware peripherals — LCD, RTC, keypad, buzzer, and interrupt system.
+- Reads and maintains the current time from the RTC.
+- Continuously compares the current time with the next scheduled reminder.
+- When the reminder time is reached, lights the Yellow LED, sounds the buzzer, and displays a message on the LCD.
+- Repeats the alert until the user presses the Drink button to acknowledge it.
+- On acknowledgment, increments the glass counter, updates the LCD with glasses consumed and remaining, and schedules the next reminder.
+- Lights the Green LED once the daily hydration goal is achieved.
+- At midnight, resets the glass counter and status indicators while retaining the configured daily goal.
 
 ### 🔐 Configuration Mode
 
-1. Activated through the Switch connected to the microcontroller's external interrupt pin.
-2. The interrupt service routine sets the Configuration Mode flag.
-3. The user navigates the menu using the keypad.
-4. The user can choose to edit the RTC date/time or the daily hydration goal.
-5. Entered values are validated and stored before returning to Normal Mode.
-6. Normal reminder monitoring resumes without needing a system restart.
+- Activated through the Switch connected to the microcontroller's external interrupt pin.
+- The interrupt service routine sets the Configuration Mode flag.
+- The user navigates the menu using the keypad.
+- The user can choose to edit the RTC date/time or the daily hydration goal.
+- Entered values are validated and stored before returning to Normal Mode.
+- Normal reminder monitoring resumes without needing a system restart.
 
 ## 🔧 Hardware Requirements
 
@@ -124,7 +123,7 @@ AquaGuardian-Smart-Water-Drinking-Reminder-System/
 ├── delay (1).c
 ├── types (1).h
 │
-├── aquaguardian_block_diagram.svg
+├── aquaguardian_block_diagram-1.svg
 │
 └── README.md
 ```
@@ -133,24 +132,25 @@ AquaGuardian-Smart-Water-Drinking-Reminder-System/
 
 | Module | Responsibility |
 |---|---|
-| `main.c` | Main application flow and overall system control |
-| `aquaguardian.c` | Reminder scheduling, glass counting, and goal tracking |
-| `aquaguardian.h` | AquaGuardian definitions |
-| `rtc-1.c` | RTC initialization and time handling |
-| `rtc.h` | RTC definitions |
-| `lcd (1).c` | 16×2 LCD driver and display operations |
-| `lcd.h` | LCD function declarations |
-| `kpm-1.c` | 4×4 keypad scanning and key detection |
-| `kpm.h` | Keypad definitions |
-| `interrupt-1.c` | External interrupt configuration and ISR (Switch and Drink button) |
-| `delay (1).c` | Delay generation |
-| `types (1).h` | Data type definitions |
+| main.c | Main application flow and overall system control |
+| aquaguardian.c | Reminder scheduling, glass counting, and goal tracking |
+| aquaguardian.h | AquaGuardian definitions |
+| rtc-1.c | RTC initialization and time handling |
+| rtc.h | RTC definitions |
+| lcd (1).c | 16×2 LCD driver and display operations |
+| lcd.h | LCD function declarations |
+| kpm-1.c | 4×4 keypad scanning and key detection |
+| kpm.h | Keypad definitions |
+| interrupt-1.c | External interrupt configuration and ISR (Switch and Drink button) |
+| delay (1).c | Delay generation |
+| types (1).h | Data type definitions |
 
 ## 🖥️ Simulation & Output
 
 The system is designed around an LPC2148-based embedded controller with a 16×2 LCD, 4×4 keypad, RTC, status LEDs, buzzer, and an external Switch.
 
 **Main Output Behaviour**
+
 - Current date and time are displayed through the LCD.
 - Glasses consumed and remaining target are shown continuously.
 - The Yellow LED and buzzer activate when a reminder is due.
@@ -167,17 +167,16 @@ The system is designed around an LPC2148-based embedded controller with a 16×2 
 
 ## ⭐ Project Highlights
 
-*Real-Time • Reliable • Simple • Modular*
+**Real-Time • Reliable • Simple • Modular**
 
 The project combines RTC-based scheduling, hydration tracking, keypad input, LCD interfacing, external interrupt handling, LED status indication, and buzzer alerts into a single compact embedded healthcare solution.
 
 ## 📈 Future Enhancements
 
-Add EEPROM/Flash logging to retain hydration history across power cycles
-Add a Red LED to indicate missed reminders or significant backlog against the daily target
-Add Bluetooth/Wi-Fi connectivity to synchronize hydration data with a mobile application
-Support multiple user profiles with individual daily hydration goals
-
+- Add EEPROM/Flash logging to retain hydration history across power cycles
+- Add a Red LED to indicate missed reminders or significant backlog against the daily target
+- Add Bluetooth/Wi-Fi connectivity to synchronize hydration data with a mobile application
+- Support multiple user profiles with individual daily hydration goals
 
 ## 👤 Author
 
